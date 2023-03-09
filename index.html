@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple_Caculator</title>
+</head>
+<body>
+<form action="#">
+  <input type="text" id="first_number" placeholder="Nhập a">
+  <input type="text" id="second_number" placeholder="Nhập b"><br>
+  <button type="button" id="btn1">Additon(+)</button>
+  <button type="button" id="btn2">Subtraction(-)</button>
+  <button type="button" id="btn3">Multiplicatio(X)</button>
+  <button type="button" id="btn4">Division(/)</button>
+  <p id="result"></p>
+</form>
+</body>
+</html>
+<script>
+    let btn1 = document.getElementById('btn1');
+    let btn2 = document.getElementById('btn2');
+    let btn3 = document.getElementById('btn3');
+    let btn4 = document.getElementById('btn4');
+
+    btn1.addEventListener('click', add)
+    function add() {
+        let a = +document.getElementById('first_number').value;
+        let b = +document.getElementById('second_number').value;
+        let result = document.getElementById('result');
+        result.innerHTML = 'Result = ' + (a + b);
+    }
+
+    btn2.addEventListener('click', sub)
+    function sub() {
+        let a = +document.getElementById('first_number').value;
+        let b = +document.getElementById('second_number').value;
+        let result = document.getElementById('result');
+        result.innerHTML = 'Result = ' + (a - b);
+    }
+
+    btn3.addEventListener('click', multi)
+    function multi() {
+        let a = +document.getElementById('first_number').value;
+        let b = +document.getElementById('second_number').value;
+        let result = document.getElementById('result');
+        result.innerHTML = 'Result = ' + (a * b);
+    }
+
+    btn4.addEventListener('click', div)
+    function div() {
+        let a = +document.getElementById('first_number').value;
+        let b = +document.getElementById('second_number').value;
+        let result = document.getElementById('result');
+        result.innerHTML = 'Result = ' + (a / b);
+    }
+</script>
